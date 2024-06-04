@@ -38,7 +38,7 @@ const Sewa = () => {
             </p>
           </div>
           <Link
-            to="/rent/detail"
+            to="/penyewa/detail-sewa"
             className="px-8 py-2 text-white rounded-2xl bg-[#165668]"
           >
             Selengkapnya

@@ -17,7 +17,7 @@ const Beranda = () => {
             <p className="text-3xl font-light">
               Sewa dan sewakan alat musik dengan mudah
             </p>
-            <Link>
+            <Link to="/signin">
               <div className="border-2 text-center w-fit h-fit px-10 py-3 rounded-xl mt-8">
                 <p>Mulai Telusuri</p>
               </div>

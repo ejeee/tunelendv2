@@ -1,8 +1,10 @@
 import React from "react";
 import tunelendLogo from "../assets/image/tunelend.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
   return (
     <>
       <div className="w-full h-fit bg-[#165668] flex justify-between py-3 px-32">
@@ -19,8 +21,8 @@ const Navbar = () => {
           <Link to="/faq" className="mr-12">
             Pertanyaan Umum
           </Link>
-          <Link>
-            <div onClick={() => navigate("/signin")} className="border-2 rounded-2xl px-8 py-1">
+          <Link to="/signin">
+            <div className="border-2 rounded-2xl px-8 py-1">
               <p>Masuk</p>
             </div>
           </Link>

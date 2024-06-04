@@ -24,10 +24,10 @@ function App() {
             <Route path="/" element={<Beranda />} />
             <Route path="/signin" element={<Signin />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/about-us" element={<TentangKami />} />
+            <Route path="/tentang-kami" element={<TentangKami />} />
             <Route path="/faq" element={<PertanyaanUmum />} />
             <Route path="/penyewa" element={<Penyewa />} />
-            <Route path="/penyewa/detailSewa" element={<DetailSewa />} />
+            <Route path="/penyewa/detail-sewa" element={<DetailSewa />} />
             <Route path="/pemilik" element={<Pemilik />} />
           </Routes>
         </div>

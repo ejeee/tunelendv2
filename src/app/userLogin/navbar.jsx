@@ -19,10 +19,10 @@ const Navbar = () => {
           <Link to="/faq" className="mr-12">
             Pertanyaan Umum
           </Link>
-          <Link to="/rent" className="mr-12">
+          <Link to="/penyewa" className="mr-12">
             Penyewa
           </Link>
-          <Link to="/owner" className="mr-12">
+          <Link to="/pemilik" className="mr-12">
             Pemilik
           </Link>
           <Link>
