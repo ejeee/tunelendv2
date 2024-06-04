@@ -3,7 +3,6 @@ import tunelendLogo from "../assets/image/tunelend.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-    const navigate = useNavigate();
 
   return (
     <>
@@ -15,7 +14,7 @@ const Navbar = () => {
           <Link to="/" className="mr-8">
             Beranda
           </Link>
-          <Link to="/about-us" className="mr-8">
+          <Link to="/tentang-kami" className="mr-8">
             Tentang Kami
           </Link>
           <Link to="/faq" className="mr-12">

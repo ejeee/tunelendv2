@@ -1,19 +1,19 @@
 import React from "react";
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { Pagination } from "flowbite-react";
 import { useState } from "react";
+import { Checkbox, Table, Badge } from "flowbite-react";
 
-// import gitar from "../../../../assets/image/gitar.png";
-// import star from "../../../../assets/image/star.svg";
+// import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+// import gitar from "../../../../../assets/image/gitar.png";
+// import star from "../../../../../assets/image/star.svg";
 // import caca from "../../../assets/image/caca.png";
 // import { FaInstagram } from "react-icons/fa6";
 // import { FiLinkedin } from "react-icons/fi";
 // import { PiGithubLogo } from "react-icons/pi";
 // import tangan from "../../../assets/image/animasiTangan.png";
-import { Checkbox, Table, Badge } from "flowbite-react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-const AlatMusik = () => {
+const Verifikasi = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const onPageChange = (page) => setCurrentPage(page);
@@ -27,7 +27,6 @@ const AlatMusik = () => {
             </Table.HeadCell>
             <Table.HeadCell>Nama Penyewa</Table.HeadCell>
             <Table.HeadCell>Tanggal Dan Waktu</Table.HeadCell>
-            <Table.HeadCell>Total</Table.HeadCell>
             <Table.HeadCell>Status</Table.HeadCell>
             <Table.HeadCell>
               <span className="sr-only">Detail</span>
@@ -43,11 +42,8 @@ const AlatMusik = () => {
               </Table.Cell>
               <Table.Cell>Apr 23 ,2021</Table.Cell>
               <Table.Cell>
-                <p className="font-medium">Rp 25.000</p>
-              </Table.Cell>
-              <Table.Cell>
                 <Badge color="success" className="w-fit">
-                  Selesai
+                  Sudah Diverifikasi
                 </Badge>
               </Table.Cell>
               <Table.Cell>
@@ -64,9 +60,6 @@ const AlatMusik = () => {
                 Adinda
               </Table.Cell>
               <Table.Cell>Apr 23, 2021</Table.Cell>
-              <Table.Cell>
-                <p className="font-medium">Rp 30.000</p>
-              </Table.Cell>
               <Table.Cell>
                 <Badge color="failure" className="w-fit">
                   Dibatalkan
@@ -87,11 +80,8 @@ const AlatMusik = () => {
               </Table.Cell>
               <Table.Cell>Apr 18, 2021</Table.Cell>
               <Table.Cell>
-                <p className="font-medium">Rp 15.000</p>
-              </Table.Cell>
-              <Table.Cell>
                 <Badge color="indigo" className="w-fit">
-                  Dalam Proses
+                  Belum Diverifikasi
                 </Badge>
               </Table.Cell>
               <Table.Cell>
@@ -115,4 +105,4 @@ const AlatMusik = () => {
   );
 };
 
-export default AlatMusik;
+export default Verifikasi;

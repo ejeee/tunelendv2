@@ -1,17 +1,17 @@
 import React from "react";
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-import Navbar from "../../../components/navbar";
+// import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import Navbar from "../navbar";
 import Footer from "../../../components/footer";
 import gitar from "../../../assets/image/gitar.png";
 import star from "../../../assets/image/star.svg";
-import avatar from "../../../assets/image/avatar.png";
+import avatar from "../../../assets/image/fikri.png";
 import { Carousel } from "flowbite-react";
 import caca from "../../../assets/image/caca.png";
 // import { FaInstagram } from "react-icons/fa6";
 // import { FiLinkedin } from "react-icons/fi";
 // import { PiGithubLogo } from "react-icons/pi";
 // import tangan from "../../../assets/image/animasiTangan.png";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const DetailSewa = () => {
   return (
@@ -62,8 +62,8 @@ const DetailSewa = () => {
             <div className="w-1/4 px-16 py-4 bg-white rounded-xl shadow-2xl h-fit">
               <p className="font-medium text-lg">Owner</p>
               <div className="flex justify-center items-center">
-                <img src={avatar} alt="" className="w-24" />
-                <p className="font-medium text-md">Bagus Prayoga</p>
+                <img src={avatar} alt="" className="w-10 h-10 rounded-full" />
+                <p className="font-medium text-md px-5">Bagus Prayoga</p>
               </div>
               <div className="border-2 border-[#165668] w-full h-fit rounded-xl text-[#165668] text-center font-medium mt-2 py-2">
                 Tanya Pemilik

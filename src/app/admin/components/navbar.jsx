@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import tunelendLogo from "../../assets/image/tunelend.png";
-import profil from "../../assets/image/angel.png";
+import tunelendLogo from "../../../assets/image/tunelend.png";
+import profil from "../../../assets/image/khabil.png";
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const navigate = useNavigate();
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    const navigate = useNavigate();
 
   return (
     <>
@@ -23,11 +23,8 @@ const Navbar = () => {
           <Link to="/faq" className="mr-12">
             Pertanyaan Umum
           </Link>
-          <Link to="/penyewa" className="mr-12">
-            Penyewa
-          </Link>
-          <Link to="/pemilik" className="mr-12">
-            Pemilik
+          <Link to="/admin" className="mr-12">
+            Admin
           </Link>
           <div className="relative mr-12">
             <button

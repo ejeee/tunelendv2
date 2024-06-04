@@ -14,6 +14,7 @@ import PertanyaanUmum from "./app/homePage/pertanyaanUmum/pertanyaanUmum";
 import Penyewa from "./app/userLogin/penyewa/penyewa";
 import DetailSewa from "./app/userLogin/penyewa/detailSewa";
 import Pemilik from "./app/userLogin/pemilik/pemilik";
+import Admin from "./app/admin/admin";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/penyewa" element={<Penyewa />} />
             <Route path="/penyewa/detail-sewa" element={<DetailSewa />} />
             <Route path="/pemilik" element={<Pemilik />} />
+            <Route path="/admin" element={<Admin />} />
           </Routes>
         </div>
       </BrowserRouter>

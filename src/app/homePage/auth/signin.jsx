@@ -4,6 +4,7 @@ import man from "../../../assets/image/man.png";
 import { Link } from "react-router-dom";
 
 const Signin = () => {
+    
   return (
     <>
       <section className="w-screen h-screen bg-white">
@@ -58,10 +59,10 @@ const Signin = () => {
               </div>
               <div className="flex justify-center w-full">
                 <button
-                  type="submit"
+                  type="Masuk"
                   class="items-center content-center text-white bg-[#165668] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
                 >
-                  Submit
+                  Masuk
                 </button>
               </div>
 

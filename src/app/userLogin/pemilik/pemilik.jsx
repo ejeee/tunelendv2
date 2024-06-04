@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../../../components/navbar";
+import Navbar from "../navbar";
 import Footer from "../../../components/footer";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import AlatMusik from "./components/alatMusik.jsx";
