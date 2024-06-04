@@ -20,7 +20,7 @@ const Navbar = () => {
             Pertanyaan Umum
           </Link>
           <Link>
-            <div className="border-2 rounded-2xl px-8 py-1">
+            <div onClick={() => navigate("/signin")} className="border-2 rounded-2xl px-8 py-1">
               <p>Masuk</p>
             </div>
           </Link>
