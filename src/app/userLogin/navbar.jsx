@@ -19,6 +19,12 @@ const Navbar = () => {
           <Link to="/faq" className="mr-12">
             Pertanyaan Umum
           </Link>
+          <Link to="/rent" className="mr-12">
+            Penyewa
+          </Link>
+          <Link to="/owner" className="mr-12">
+            Pemilik
+          </Link>
           <Link>
             <div className="border-2 rounded-2xl px-8 py-1">
               <p>Masuk</p>
