@@ -6,8 +6,8 @@ import caca from "../../../assets/image/caca.png";
 import { FaInstagram } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
 import { PiGithubLogo } from "react-icons/pi";
-import tangan from "../../../assets/image/animasiTangan.png";
-import { Link } from "react-router-dom";
+// import tangan from "../../../assets/image/animasiTangan.png";
+// import { Link } from "react-router-dom";
 
 const TentangKamiUser = () => {
   return (

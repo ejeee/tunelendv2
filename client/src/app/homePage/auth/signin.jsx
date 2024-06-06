@@ -58,7 +58,7 @@ const Signin = () => {
                   placeholder="Masukkan email anda"
                   value={signinEmail}
                   onChange={(e) => setSigninEmail(e.target.value)}
-                  
+                  required
                 />
               </div>
               <div class="mb-5">
@@ -75,7 +75,7 @@ const Signin = () => {
                   placeholder="Masukkan password"
                   value={signinPassword}
                   onChange={(e) => setSigninPassword(e.target.value)}
-                  
+                  required
                 />
               </div>
               <div className="flex justify-center w-full">
