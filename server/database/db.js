@@ -8,6 +8,13 @@ const db = mysql.createPool({
     database: process.env.DATABASE
 })
 
+const pool = mysql.createPool({
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
+});
+
 async function connection () {
     try {
         await db.getConnection();
@@ -24,6 +31,11 @@ async function query(command, values) {
     } catch (error) {
         console.log(error);
     }
+}
+
+async function queryTools(sql, params) {
+    const [results] = await pool.execute(sql, params);
+    return results;
 }
 
 export {connection, query};

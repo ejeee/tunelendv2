@@ -1,7 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import { connection } from "./database/db.js";
-import route from "./router/userRoute.js";
+import userRouter from "./router/userRoute.js";
+import toolsRouter from "./router/toolsRoute.js";
 import cors from "cors";
 
 dotenv.config();
@@ -12,7 +13,7 @@ app.use(cors({
     Credential : true
 }))
 app.use(express.json());
-app.use(route);
+app.use(userRouter, toolsRouter);
 
 
 app.listen(process.env.APP_PORT, () => {

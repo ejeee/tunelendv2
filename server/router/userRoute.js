@@ -1,9 +1,9 @@
 import express, { Router } from "express";
 import { signup, signin, getUser } from "../controller/auth.js";
 
-const router = express.Router();
+const userRouter = express.Router();
 
-router.post('/signin', async (req, res) => {
+userRouter.post('/signin', async (req, res) => {
     const { email, password } = req.body;
     const result = await signin(email, password);
     if (result.success) {
@@ -14,7 +14,7 @@ router.post('/signin', async (req, res) => {
 });
 
 // Register endpoint
-router.post('/signup', async (req, res) => {
+userRouter.post('/signup', async (req, res) => {
     const { email, password, confirm_password } = req.body;
     const result = await signup(email, password, confirm_password);
     if (result.success) {
@@ -24,7 +24,7 @@ router.post('/signup', async (req, res) => {
     }
 });
 
-router.get('/user', async (req, res) => {
+userRouter.get('/user', async (req, res) => {
     const username = req.params.username;
     const user = await getUser(username);
     if (user) {
@@ -34,4 +34,4 @@ router.get('/user', async (req, res) => {
     }
 });
 
-export default router;
+export default userRouter;
