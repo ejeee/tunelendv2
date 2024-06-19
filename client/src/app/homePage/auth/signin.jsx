@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import tunelendLogo from "../../../assets/image/tunelend.png";
 import man from "../../../assets/image/man.png";
 import { Link, useNavigate } from "react-router-dom";
-import { signin } from "../../../service/api";
+import { signin } from "../../../service/auth";
 
 const Signin = () => {
   const [signinEmail, setSigninEmail] = useState("");

@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const backendUrl = 'http://localhost:3000'; // Ganti dengan alamat dan port backend Anda
+const backendUrl = 'http://localhost:3000';
 
 // Fungsi untuk login
 const signin = async (email, password) => {
@@ -15,11 +15,23 @@ const signin = async (email, password) => {
 };
 
 // Fungsi untuk registrasi
+// const signup = async (email, password, confirm_password) => {
+//     try {
+//         const response = await axios.post(`${backendUrl}/signup`, { email, password, confirm_password });
+//         return { success: true, message: response.message };
+//     } catch (error) {
+//         return { success: false, message: error.response.data.message };
+//     }
+// };
+
+// Function for user signup
 const signup = async (email, password, confirm_password) => {
     try {
         const response = await axios.post(`${backendUrl}/signup`, { email, password, confirm_password });
-        return { success: true, message: response.message };
+        console.log('Signup API Response:', response.data); // Log the response data
+        return { success: true, message: response.data.message };
     } catch (error) {
+        console.error('Signup API Error:', error.response.data); // Log the error response data
         return { success: false, message: error.response.data.message };
     }
 };
