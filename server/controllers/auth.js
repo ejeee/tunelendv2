@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 
 const saltRounds = 10;
 
-const getUser = async () => {
+async function getUser () {
     const command = 'SELECT * FROM user'; // Select all users
     const result = await query(command);
     return result;
@@ -62,4 +62,4 @@ async function signup(email, password, confirm_password) {
         return { success: false, message: error.message };
     }
 }
-export {signin, signup, getUser};
+export  {signin, signup, getUser};

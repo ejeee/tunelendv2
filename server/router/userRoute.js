@@ -1,5 +1,5 @@
-import express, { Router } from "express";
-import { signup, signin, getUser } from "../controller/auth.js";
+import express from "express";
+import { signup, signin } from "../controllers/auth.js";
 
 const userRouter = express.Router();
 
@@ -24,14 +24,10 @@ userRouter.post('/signup', async (req, res) => {
     }
 });
 
-userRouter.get('/user', async (req, res) => {
-    const username = req.params.username;
-    const user = await getUser(username);
-    if (user) {
-        res.json(user);
-    } else {
-        res.status(404).json({ success: false, message: 'User not found' });
-    }
-});
+
+// userRouter.post('/signin', signin);
+// userRouter.post('/signup', signup);
+// userRouter.get('/user/:username', checkPermission('read_user'), getUser);
+
 
 export default userRouter;

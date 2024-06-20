@@ -1,10 +1,10 @@
 import express from 'express';
-import { getAllTools, getToolById, createTool, updateTool, deleteTool } from '../controller/tools.js';
+import { getAllTools, getToolById, createTool, updateTool, deleteTool } from '../controllers/tools.js';
+import {checkPermission} from '../middleware/rbacMiddleware.js';
 
 const toolsRoute = express.Router();
 
-// Get all tools
-toolsRoute.get('/tools', async (req, res) => {
+toolsRoute.get('/tools', checkPermission('read_tool'), async (req, res) => {
     const { page, pageSize } = req.query;
     try {
         const tools = await getAllTools(parseInt(page), parseInt(pageSize));
@@ -15,7 +15,7 @@ toolsRoute.get('/tools', async (req, res) => {
 });
 
 // Get a tool by ID
-toolsRoute.get('/tools/:id', async (req, res) => {
+toolsRoute.get('/tools/:id', checkPermission('read_tool'), async (req, res) => {
     const { id } = req.params;
     try {
         const tool = await getToolById(id);
@@ -30,7 +30,7 @@ toolsRoute.get('/tools/:id', async (req, res) => {
 });
 
 // Create a new tool
-toolsRoute.post('/tools', async (req, res) => {
+toolsRoute.post('/tools', checkPermission('create_tool'), async (req, res) => {
     try {
         const newTool = await createTool(req.body);
         res.status(201).json(newTool);
@@ -40,7 +40,7 @@ toolsRoute.post('/tools', async (req, res) => {
 });
 
 // Update an existing tool
-toolsRoute.put('/tools/:id', async (req, res) => {
+toolsRoute.put('/tools/:id', checkPermission('update_tool'), async (req, res) => {
     const { id } = req.params;
     try {
         const updatedTool = await updateTool(id, req.body);
@@ -51,7 +51,7 @@ toolsRoute.put('/tools/:id', async (req, res) => {
 });
 
 // Delete a tool
-toolsRoute.delete('/tools/:id', async (req, res) => {
+toolsRoute.delete('/tools/:id', checkPermission('delete_tool'), async (req, res) => {
     const { id } = req.params;
     try {
         const result = await deleteTool(id);
@@ -60,5 +60,11 @@ toolsRoute.delete('/tools/:id', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+// toolsRoute.get('/tools', checkPermission('read_tool'), getAllTools);
+// toolsRoute.get('/tools/:id', checkPermission('read_tool'), getToolById);
+// toolsRoute.post('/tools', checkPermission('create_tool'), createTool);
+// toolsRoute.put('/tools/:id', checkPermission('update_tool'), updateTool);
+// toolsRoute.delete('/tools/:id', checkPermission('delete_tool'), deleteTool);
 
 export default toolsRoute;
