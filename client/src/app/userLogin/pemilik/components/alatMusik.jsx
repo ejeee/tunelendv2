@@ -25,9 +25,9 @@ const AlatMusik = () => {
             <Table.HeadCell className="p-4">
               <Checkbox />
             </Table.HeadCell>
-            <Table.HeadCell>Nama Penyewa</Table.HeadCell>
-            <Table.HeadCell>Tanggal Dan Waktu</Table.HeadCell>
-            <Table.HeadCell>Total</Table.HeadCell>
+            <Table.HeadCell>Nama Alat Musik</Table.HeadCell>
+            <Table.HeadCell>Rate</Table.HeadCell>
+            <Table.HeadCell>Spesifikasi</Table.HeadCell>
             <Table.HeadCell>Status</Table.HeadCell>
             <Table.HeadCell>
               <span className="sr-only">Detail</span>
