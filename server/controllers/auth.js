@@ -36,13 +36,13 @@ async function signup(email, password, confirm_password) {
     try {
         // Validate input
         if (!email || !password) {
-            throw new Error('Email dan password anda tidak valid');
+            throw new Error('Your email and password are invalid.');
         }
 
         if (confirm_password != password) {
             console.log("password", password)
             console.log("confirm_password", confirm_password)
-            throw new Error('Password Anda tidak sama!');
+            throw new Error('Your password does not match!');
         }
 
         const hashedPassword = await bcrypt.hash(password, saltRounds);
