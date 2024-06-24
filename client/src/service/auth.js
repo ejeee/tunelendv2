@@ -25,9 +25,9 @@ const signin = async (email, password) => {
 // };
 
 // Function for user signup
-const signup = async (email, password, confirm_password) => {
+const signup = async (email, password) => {
     try {
-        const response = await axios.post(`${backendUrl}/signup`, { email, password, confirm_password });
+        const response = await axios.post(`${backendUrl}/signup`, { email, password });
         console.log('Signup API Response:', response.data); // Log the response data
         return { success: true, message: response.data.message };
     } catch (error) {

@@ -5,24 +5,46 @@ import { Link, useNavigate } from "react-router-dom";
 import { signup } from "../../../service/auth";
 
 const Signup = () => {
-  const [signupEmail, setsignupEmail] = useState('');
-  const [signupPassword, setsignupPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [confirmPassword, setconfirmPassword] = useState('');
 
   const [isAlertSuccess, setIsAlertSuccess] = useState(false);
   const [isAlertError, setIsAlertError] = useState(false);
-  const [messageError, setMessageError] = useState('');
+  // const [messageError, setMessageError] = useState('');
   const navigate = useNavigate();
 
-  const handleSignup = async () => {
-    const response = await signup(signupEmail, signupPassword, confirmPassword);
-    if(response.success){
-      setIsAlertSuccess(!isAlertSuccess);
-    } else {
-      setIsAlertError(!isAlertError);
-      setMessageError(response.message);
+  // const handleSignup = async () => {
+  //   const response = await signup(email, password, confirmPassword);
+  //   if(response.success){
+  //     setIsAlertSuccess(!isAlertSuccess);
+  //   } else {
+  //     setIsAlertError(!isAlertError);
+  //     setMessageError(response.message);
+  //   }
+  // };
+
+  const handleSignup = async (event) => {
+    event.preventDefault();
+    if (password !== confirmPassword) {
+        alert("Passwords don't match!");
+        return;
     }
-  };
+    
+    try {
+        const response = await signup(email, password);
+        if (response.success) {
+            console.log("Registered successfully");
+            navigate("/signin");
+        } else {
+            console.error('Registration failed:', response.message);
+            alert('Registration failed: ' + response.message);
+        }
+    } catch (error) {
+        console.error('Registration error:', error);
+        alert('Registration failed: there is an error');
+    }
+};
 
 
   return (
@@ -59,8 +81,8 @@ const Signup = () => {
                   id="email"
                   className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="Masukkan email anda"
-                  value={signupEmail}
-                  onChange={(e) => setsignupEmail(e.target.value)}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -76,8 +98,8 @@ const Signup = () => {
                   id="password"
                   className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="Masukkan password"
-                  value={signupPassword}
-                  onChange={(e) => setsignupPassword(e.target.value)}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   required
                 />
               </div>
