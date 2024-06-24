@@ -15,8 +15,8 @@ userRouter.post('/signin', async (req, res) => {
 
 // Register endpoint
 userRouter.post('/signup', async (req, res) => {
-    const { email, password, confirm_password } = req.body;
-    const result = await signup(email, password, confirm_password);
+    const { email, password } = req.body;
+    const result = await signup(email, password);
     if (result.success) {
         res.status(201).json(result);
     } else {
