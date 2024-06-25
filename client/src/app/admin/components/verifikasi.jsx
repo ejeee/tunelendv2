@@ -6,6 +6,8 @@ import {
   DialogTitle,
   Transition,
 } from "@headlessui/react";
+
+import gitar from "../../../assets/image/gitar.png";
 import star from "../../../assets/image/star.svg";
 
 
@@ -123,6 +125,15 @@ const Verifikasi = () => {
             leaveTo="opacity-0 scale-95"
           >
             <Dialog.Panel className="relative z-30 h-fit w-3/4 bg-white shadow-2xl px-8 py-8 rounded-lg flex mr-8">
+            <div className="w-full h-96 border-2 rounded-xl">
+                <Carousel>
+                  <img src={gitar} alt="Gitar" className="w-18" />
+                  <img src={gitar} alt="Gitar" className="w-18" />
+                  <img src={gitar} alt="Gitar" className="w-18" />
+                  <img src={gitar} alt="Gitar" className="w-18" />
+                  <img src={gitar} alt="Gitar" className="w-18" />
+                </Carousel>
+              </div>
               <div className="pl-12">
                 <p className="font-medium text-lg mt-4">
                   Yamaha Gitar Klasik C80
