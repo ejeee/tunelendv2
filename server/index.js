@@ -21,7 +21,7 @@ app.use(cors({
 }));
 
 // routers
-app.use(userRouter);
+app.use( userRouter);
 app.use(checkRole('user'), toolsRouter);
 
 app.listen(PORT, () => {

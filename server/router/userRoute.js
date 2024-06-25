@@ -1,5 +1,5 @@
 import express from "express";
-import { signup, signin } from "../controllers/auth.js";
+import { register, signin } from "../controllers/auth.js";
 
 const userRouter = express.Router();
 
@@ -14,9 +14,9 @@ userRouter.post('/signin', async (req, res) => {
 });
 
 // Register endpoint
-userRouter.post('/signup', async (req, res) => {
+userRouter.post('/register', async (req, res) => {
     const { email, password } = req.body;
-    const result = await signup(email, password);
+    const result = await register(email, password);
     if (result.success) {
         res.status(201).json(result);
     } else {

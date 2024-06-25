@@ -7,7 +7,7 @@ const jwtSecretKey = process.env.JWT_SECRET;
 const saltRounds = 10;
 
 async function getUser () {
-    const command = 'SELECT * FROM user';
+    const command = 'SELECT * FROM user'; // Select all users
     const result = await query(command);
     return result;
 };
@@ -42,19 +42,18 @@ async function signin (email, password) {
         return { success: false, message: error.message };
     }
 }
-
-async function signup(email, password) {
+async function register(email, password) {
     try {
         // Validate input
         if (!email || !password) {
-            throw new Error('Your email and password are invalid.');
+            throw new Error('Email and password are required');
         }
 
         const hashedPassword = await bcrypt.hash(password, saltRounds);
 
         const existingUser = await query('SELECT * FROM user WHERE email = ?', [email]);
         if (existingUser.length > 0) {
-            throw new Error('email is already taken');
+            throw new Error('Email is already taken');
         }
 
         // Add new user to the database
@@ -67,4 +66,4 @@ async function signup(email, password) {
         return { success: false, message: error.message };
     }
 }
-export  {signin, signup, getUser};
+export  {signin, register, getUser};
