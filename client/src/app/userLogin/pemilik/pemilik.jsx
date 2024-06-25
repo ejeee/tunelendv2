@@ -4,41 +4,32 @@ import Footer from "../../../components/footer";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import AlatMusik from "./components/alatMusik.jsx";
 
-// import Statistik from "./components/statisktik";
-// import tunelend from "../../../assets/image/tunelend2.png";
-// import caca from "../../../assets/image/caca.png";
-// import { FaInstagram } from "react-icons/fa6";
-// import { FiLinkedin } from "react-icons/fi";
-// import { PiGithubLogo } from "react-icons/pi";
-// import tangan from "../../../assets/image/animasiTangan.png";
-// import { Link } from "react-router-dom";
-
 const Pemilik = () => {
   return (
     <>
-      <section className="font-inter w-screen h-full bg-white">
+      <section className="font-inter w-screen min-h-screen bg-white">
         <Navbar />
-        <div className="px-32 py-14">
+        <div className="px-4 sm:px-8 md:px-16 lg:px-32 py-14">
           <p className="text-4xl font-semibold">Selamat Datang, Aca!</p>
           <div className="mt-8">
             <TabGroup>
-              <TabList className="flex gap-4">
-                <div className="w-fit h-fit bg-slate-300 py-1 px-1 rounded-lg">
+              <TabList className="flex gap-4 overflow-x-auto">
+                <div className="flex-shrink-0 bg-slate-300 py-1 px-1 rounded-lg whitespace-nowrap">
                   <Tab
                     key="alat"
-                    className="rounded-xl py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-white data-[selected]:font-bold data-[hover]:bg-white data-[selected]:data-[hover]:bg-white data-[focus]:outline-none data-[focus]:outline-none"
+                    className="rounded-xl py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-white data-[selected]:font-bold data-[hover]:bg-white data-[selected]:data-[hover]:bg-white data-[focus]:outline-none"
                   >
                     Alat Musik Anda
                   </Tab>
                   {/* <Tab
                     key="statistik"
-                    className="rounded-xl py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-white data-[selected]:font-bold data-[hover]:bg-white data-[selected]:data-[hover]:bg-white data-[focus]:outline-none data-[focus]:outline-none"
+                    className="rounded-xl py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-white data-[selected]:font-bold data-[hover]:bg-white data-[selected]:data-[hover]:bg-white data-[focus]:outline-none"
                   >
                     Statistik Website
                   </Tab>
                   <Tab
                     key="verif"
-                    className="rounded-xl py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-white data-[selected]:font-bold data-[hover]:bg-white data-[selected]:data-[hover]:bg-white data-[focus]:outline-none data-[focus]:outline-none"
+                    className="rounded-xl py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-white data-[selected]:font-bold data-[hover]:bg-white data-[selected]:data-[hover]:bg-white data-[focus]:outline-none"
                   >
                     Verifikasi Postingan
                   </Tab> */}

@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../navbar";
+import Navbar from "../../../components/navbar";
 import Footer from "../../../components/footer";
 import nada from "../../../assets/image/nada.png";
 import person from "../../../assets/image/man2.png";
@@ -11,17 +11,17 @@ const BerandaUser = () => {
     <>
       <section className="font-inter w-screen h-full bg-white overflow-x-hidden">
         <Navbar />
-        <div className="w-full h-fit bg-[#165668] flex justify-between items-center text-white px-32">
+        <div className="w-full h-fit bg-[#165668] flex md:flex-row flex-col justify-between items-center text-white px-10 sm:px-20 md:px-32 py-28 md:py-0">
           <div>
-            <p className="text-7xl font-semibold">Selamat datang!</p>
-            <p className="text-3xl font-light mt-4">
+            <p className="text-7xl font-semibold">Selamat Datang!</p>
+            <p className="text-3xl font-light">
               Sewa dan sewakan alat musik dengan mudah
             </p>
           </div>
           <img src={nada} alt="" className="w-[540px] h-fit" />
         </div>
-        <div className="px-32 w-full h-fit py-12">
-          <div className="w-full h-fit border-2 radius-lg flex items-center px-32">
+        <div className="px-10 sm:px-20 md:px-32 w-full h-fit py-12">
+          <div className="w-full h-fit border-2 radius-lg flex flex-col md:flex-row items-center p-10 sm:px-20 md:px-32">
             <div className="w-full">
               <img src={person} alt="" />
             </div>
@@ -39,7 +39,7 @@ const BerandaUser = () => {
               </p>
             </div>
           </div>
-          <div className="w-full h-fit border-2 radius-lg flex items-center px-32 mt-12">
+          <div className="w-full h-fit border-2 radius-lg flex flex-col md:flex-row items-center p-10 sm:px-20 md:px-32 mt-12">
             <div className="w-full">
               <p className="text-3xl font-semibold">
                 Sewakan alat musik yang Anda inginkan

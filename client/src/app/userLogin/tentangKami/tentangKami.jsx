@@ -18,13 +18,11 @@ const TentangKamiUser = () => {
     <>
       <section className="font-inter w-screen h-full bg-white">
         <Navbar />
-        <div className="px-32 py-24">
+        <div className="px-10 sm:px-20 md:px-32 py-24">
           <div className="w-full h-fit">
-            <div className="w-full h-fit border-2 radius-lg flex items-center px-52 py-28">
-              <div className="w-fit">
-                <img src={tunelend} alt="" />
-              </div>
-              <div className="w-full ml-12">
+            <div className="w-full h-fit border-2 radius-lg flex flex-col md:flex-row items-center md:px-52 py-28">
+              <img src={tunelend} alt="" className="w-40" />
+              <div className="w-full ml-20 md:ml-12">
                 <p className="text-4xl font-bold">Tentang TuneLend</p>
                 <div className="mr-28">
                   <p className="mt-4">
@@ -41,7 +39,7 @@ const TentangKamiUser = () => {
                 </div>
               </div>
             </div>
-            <p className="text-4xl font-semibold mt-32 text-center my-4">Tim Kami</p>
+            <p className="text-4xl font-semibold mt-32">Tim Kami</p>
             <div className="grid grid-cols-3 mx-52">
               <div className="bg-white w-64 h-128 shadow-xl rounded-lg text-center py-12 px-8">
                 <div className="flex justify-center">

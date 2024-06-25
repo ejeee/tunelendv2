@@ -11,7 +11,7 @@ const Beranda = () => {
     <>
       <section className="font-inter w-screen h-full bg-white overflow-x-hidden">
         <Navbar />
-        <div className="w-full h-fit bg-[#165668] flex justify-between items-center text-white px-32">
+        <div className="w-full h-fit bg-[#165668] flex md:flex-row flex-col justify-between items-center text-white px-10 sm:px-20 md:px-32 py-28 md:py-0">
           <div>
             <p className="text-7xl font-semibold">TuneLend</p>
             <p className="text-3xl font-light">
@@ -25,8 +25,8 @@ const Beranda = () => {
           </div>
           <img src={nada} alt="" className="w-[540px] h-fit" />
         </div>
-        <div className="px-32 w-full h-fit py-12">
-          <div className="w-full h-fit border-2 radius-lg flex items-center px-32">
+        <div className="px-10 sm:px-20 md:px-32 w-full h-fit py-12">
+          <div className="w-full h-fit border-2 radius-lg flex flex-col md:flex-row items-center p-10 sm:px-20 md:px-32">
             <div className="w-full">
               <img src={person} alt="" />
             </div>
@@ -44,7 +44,7 @@ const Beranda = () => {
               </p>
             </div>
           </div>
-          <div className="w-full h-fit border-2 radius-lg flex items-center px-32 mt-12">
+          <div className="w-full h-fit border-2 radius-lg flex flex-col md:flex-row items-center p-10 sm:px-20 md:px-32 mt-12">
             <div className="w-full">
               <p className="text-3xl font-semibold">
                 Sewakan alat musik yang Anda inginkan

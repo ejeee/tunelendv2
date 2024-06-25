@@ -15,7 +15,7 @@ const PertanyaanUmumUser = () => {
     <>
       <section className="font-inter w-screen h-full bg-white">
         <Navbar />
-        <div className="px-32 py-24 flex">
+        <div className="px-10 sm:px-20 md:px-32 py-24 flex flex-col md:flex-row">
           <div className="w-full">
             <p className="text-4xl font-semibold mb-8">Pertanyaan Umum</p>
             {/* accordion */}
@@ -64,8 +64,8 @@ const PertanyaanUmumUser = () => {
               </Accordion.Panel>
             </Accordion>
           </div>
-          <div className="w-full flex justify-center">
-            <img src={faq} alt="" />
+          <div className="hidden w-full md:flex justify-center">
+            <img src={faq} alt=""/>
           </div>
         </div>
         <Footer />

@@ -1,13 +1,6 @@
 import React from "react";
-import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-
 import gitar from "../../../../assets/image/gitar.png";
 import star from "../../../../assets/image/star.svg";
-// import caca from "../../../assets/image/caca.png";
-// import { FaInstagram } from "react-icons/fa6";
-// import { FiLinkedin } from "react-icons/fi";
-// import { PiGithubLogo } from "react-icons/pi";
-// import tangan from "../../../assets/image/animasiTangan.png";
 import { Link } from "react-router-dom";
 
 const Ringkasan = () => {

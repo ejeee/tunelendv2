@@ -3,27 +3,22 @@ import Navbar from "../../../components/navbar";
 import Footer from "../../../components/footer";
 import tunelend from "../../../assets/image/tunelend2.png";
 import caca from "../../../assets/image/caca.png";
-import dinda from "../../../assets/image/dinda.png";
-import unima from "../../../assets/image/unima.png";
-import angel from "../../../assets/image/angel.png";
-import khabil from "../../../assets/image/khabil.png";
-import fikri from "../../../assets/image/fikri.png";
 import { FaInstagram } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
 import { PiGithubLogo } from "react-icons/pi";
+import tangan from "../../../assets/image/animasiTangan.png";
+import { Link } from "react-router-dom";
 
-const TentangKamiUser = () => {
+const TentangKami = () => {
   return (
     <>
       <section className="font-inter w-screen h-full bg-white">
         <Navbar />
-        <div className="px-32 py-24">
+        <div className="px-10 sm:px-20 md:px-32 py-24">
           <div className="w-full h-fit">
-            <div className="w-full h-fit border-2 rounded-lg flex items-center px-52 py-28">
-              <div className="w-fit">
-                <img src={tunelend} alt="TuneLend" />
-              </div>
-              <div className="w-full ml-12">
+            <div className="w-full h-fit border-2 radius-lg flex flex-col md:flex-row items-center md:px-52 py-28">
+              <img src={tunelend} alt="" className="w-40" />
+              <div className="w-full ml-20 md:ml-12">
                 <p className="text-4xl font-bold">Tentang TuneLend</p>
                 <div className="mr-28">
                   <p className="mt-4">
@@ -31,7 +26,7 @@ const TentangKamiUser = () => {
                     masyarakat kota Malang dengan latar belakang hobi bermusik.
                     Kami menyediakan platform untuk menghubungkan mereka yang
                     memiliki alat musik dengan mereka yang memiliki keterbatasan
-                    untuk bermain alat musik. Dengan TuneLend, pemilik alat musik
+                    untuk bermain alat musik. Dengan TuneLend pemilik alat musik
                     bisa mendapatkan penghasilan tambahan dengan menyewakan alat
                     musiknya, sementara para penyewa bisa menemukan alat musik
                     yang mereka butuhkan dengan mudah dan harga yang lebih
@@ -40,7 +35,7 @@ const TentangKamiUser = () => {
                 </div>
               </div>
             </div>
-            <p className="text-4xl font-semibold mt-32 text-center my-4">Tim Kami</p>
+            <p className="text-4xl font-semibold mt-32">Tim Kami</p>
             <div className="grid grid-cols-3 mx-52">
               <div className="bg-white w-64 h-128 shadow-xl rounded-lg text-center py-12 px-8">
                 <div className="flex justify-center">
@@ -167,4 +162,4 @@ const TentangKamiUser = () => {
   );
 };
 
-export default TentangKamiUser;
+export default TentangKami;

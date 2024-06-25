@@ -21,7 +21,7 @@ const Signin = () => {
       if (response.success) {
         // Simpan token ke local storage atau session storage
         localStorage.setItem('token', response.token);
-        navigate('/');
+        navigate('/beranda-user');
       } else {
         alert(response.message); 
       }
@@ -34,7 +34,7 @@ const Signin = () => {
     <>
       <section className="font-inter w-screen h-screen bg-white">
         <div className="font-inter flex w-full h-full">
-          <div className="w-full h-full bg-[#165668] px-16 py-8">
+          <div className="hidden md:block w-full h-full bg-[#165668] px-16 py-8">
             <img src={tunelendLogo} alt="" className="h-auto w-36" />
             <div className="flex justify-center mt-24">
               <img src={man} alt="" className="h-auto w-96" />

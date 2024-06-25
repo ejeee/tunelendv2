@@ -1,28 +1,26 @@
 import React from "react";
 import tunelendLogo from "../assets/image/tunelend.png";
-import kampusMerdeka from "../assets/image/kampusMerdeka.png";
-import infinite from "../assets/image/infinite.png";
+// import kampusMerdeka from "../assets/image/kampusMerdeka.png";
+// import infinite from "../assets/image/infinite.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <>
-      <div className="font-inter w-full h-auto px-48 bg-[#165668] py-12 text-white">
+      <div className="font-inter w-full h-auto px-10 md:px-48 bg-[#165668] py-12 text-white">
         <img src={tunelendLogo} className="w-18 h-auto" alt="TuneLend Logo" />
-        <div className="flex mt-2 justify-between">
-          <div className="w-fit">
-            <div className="w-96">
-              <p>
-                TuneLend merupakan website yang membantu masyarakat kota Malang
-                untuk melanjutkan hobi bermusik dengan solusi dari kami, sewa
-                dan sewakan alat musik yang anda miliki.
-              </p>
-            </div>
+        <div className="flex flex-col md:flex-row mt-2 justify-between">
+          <div className="md:w-96">
+            <p>
+              TuneLend merupakan website yang membantu masyarakat kota Malang
+              untuk melanjutkan hobi bermusik dengan solusi dari kami, sewa dan
+              sewakan alat musik yang anda miliki.
+            </p>
           </div>
-          <div className="grid grid-cols-3">
+          <div className="grid sm:grid-cols-3 my-10 md:mt-0 gap-10">
             <div>
               <p className="font-bold mb-4">NAVIGASI</p>
-              <div className="grid grid-rows-4 gap-4">
+              <div className="grid grid-rows-3 gap-4">
                 <Link to="/">Beranda</Link>
                 <Link to="/about-us">Tentang Kami</Link>
                 <Link to="/faq">Pertanyaan Umum</Link>
