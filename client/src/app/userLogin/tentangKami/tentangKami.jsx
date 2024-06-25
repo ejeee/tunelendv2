@@ -39,7 +39,7 @@ const TentangKamiUser = () => {
                 </div>
               </div>
             </div>
-            <p className="text-4xl font-semibold mt-32">Tim Kami</p>
+            <p className="text-4xl font-semibold mt-32 text-center my-4">Tim Kami</p>
             <div className="grid grid-cols-3 mx-52">
               <div className="bg-white w-64 h-128 shadow-xl rounded-lg text-center py-12 px-8">
                 <div className="flex justify-center">

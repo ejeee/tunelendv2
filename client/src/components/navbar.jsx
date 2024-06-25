@@ -23,25 +23,32 @@ const Navbar = () => {
   };
 
   return (
+    <>
     <nav
       className={`fixed top-0 left-0 w-full bg-[#165668] ${
         scrolled ? "shadow-md" : ""
       } z-50`}
     >
-      <div className="flex justify-between items-center py-3 px-8 md:px-32">
+      <div className="font-inter flex justify-between items-center py-3 px-8 md:px-32">
         <div>
           <img src={tunelendLogo} alt="" className="w-32 h-fit" />
         </div>
         <div className="hidden md:flex items-center text-white">
-          <Link to="/beranda-user" className="mr-8">
+          <Link to="/" className="mr-8">
             Beranda
           </Link>
-          <Link to="/tentang-kami-user" className="mr-8">
+          <Link to="/tentang-kami" className="mr-8">
             Tentang Kami
           </Link>
-          <Link to="/faq-user" className="mr-12">
+          <Link to="/faq" className="mr-12">
             Pertanyaan Umum
           </Link>
+          <button
+            onClick={() => navigate("/signin")}
+            className="border-2 rounded-2xl px-8 py-1"
+          >
+            Masuk
+          </button>
         </div>
         <div
           onClick={handleMenu}
@@ -69,20 +76,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <button
-                onClick={() => {
-                  handleMenu();
-                  navigate("/penyewa");
-                }}
-                className="border-2 rounded-2xl px-8 py-1 text-left"
-              >
-                Masuk
-              </button>
             </li>
           </ul>
         </div>
       )}
     </nav>
+    </>
   );
 };
 

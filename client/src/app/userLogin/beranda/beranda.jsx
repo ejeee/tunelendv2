@@ -1,10 +1,9 @@
 import React from "react";
-import Navbar from "../../../components/navbar";
+import Navbar from "../navbar";
 import Footer from "../../../components/footer";
 import nada from "../../../assets/image/nada.png";
 import person from "../../../assets/image/man2.png";
 import tangan from "../../../assets/image/animasiTangan.png";
-import { Link } from "react-router-dom";
 
 const BerandaUser = () => {
   return (

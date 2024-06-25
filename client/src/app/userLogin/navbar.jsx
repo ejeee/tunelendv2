@@ -1,19 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import tunelendLogo from "../../assets/image/tunelend.png";
 import profil from "../../assets/image/angel.png";
 import { Link, useNavigate } from "react-router-dom";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false); // Add state for scrolled
+  const [menu, setMenu] = useState(false); // Add state for menu
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleMenu = () => {
+    setMenu(!menu);
+  };
+
   return (
-    <>
-      <div className="font-inter w-full h-fit bg-[#165668] flex justify-between py-3 px-32">
+    <nav
+      className={`fixed top-0 left-0 w-full bg-[#165668] ${
+        scrolled ? "shadow-md" : ""
+      } z-50`}
+    >
+      <div className="font-inter flex justify-between items-center py-3 px-8 md:px-32">
         <div>
           <img src={tunelendLogo} alt="" className="w-32 h-fit" />
         </div>
-        <div className="text-white flex items-center">
+        <div className="hidden md:flex items-center text-white">
           <Link to="/beranda-user" className="mr-8">
             Beranda
           </Link>
@@ -36,7 +57,11 @@ const Navbar = () => {
               className="flex text-sm bg-gray-800 rounded-full md:me-0"
               type="button"
             >
-              <img src={profil} alt="user photo" className="w-10 h-10 rounded-full" />
+              <img
+                src={profil}
+                alt="user photo"
+                className="w-10 h-10 rounded-full"
+              />
               <span className="sr-only">Open user menu</span>
             </button>
             {dropdownOpen && (
@@ -56,8 +81,42 @@ const Navbar = () => {
             )}
           </div>
         </div>
+        <div onClick={handleMenu} className="md:hidden cursor-pointer text-white">
+          {menu ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+        </div>
       </div>
-    </>
+      {menu && (
+        <div className="md:hidden bg-[#165668] text-white">
+          <ul className="py-5 text-lg space-y-3 px-10">
+            <li>
+              <Link to="/beranda-user" onClick={handleMenu}>
+                Beranda
+              </Link>
+            </li>
+            <li>
+              <Link to="/tentang-kami-user" onClick={handleMenu}>
+                Tentang Kami
+              </Link>
+            </li>
+            <li>
+              <Link to="/faq-user" onClick={handleMenu}>
+                Pertanyaan Umum
+              </Link>
+            </li>
+            <li>
+              <Link to="/penyewa" onClick={handleMenu}>
+                Penyewa
+              </Link>
+            </li>
+            <li>
+              <Link to="/pemilik" onClick={handleMenu}>
+                Pemilik
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </nav>
   );
 };
 

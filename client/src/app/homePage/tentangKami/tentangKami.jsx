@@ -3,11 +3,14 @@ import Navbar from "../../../components/navbar";
 import Footer from "../../../components/footer";
 import tunelend from "../../../assets/image/tunelend2.png";
 import caca from "../../../assets/image/caca.png";
+import dinda from "../../../assets/image/dinda.png";
+import unima from "../../../assets/image/unima.png";
+import angel from "../../../assets/image/angel.png";
+import khabil from "../../../assets/image/khabil.png";
+import fikri from "../../../assets/image/fikri.png";
 import { FaInstagram } from "react-icons/fa6";
 import { FiLinkedin } from "react-icons/fi";
 import { PiGithubLogo } from "react-icons/pi";
-import tangan from "../../../assets/image/animasiTangan.png";
-import { Link } from "react-router-dom";
 
 const TentangKami = () => {
   return (
@@ -35,7 +38,7 @@ const TentangKami = () => {
                 </div>
               </div>
             </div>
-            <p className="text-4xl font-semibold mt-32">Tim Kami</p>
+            <p className="text-4xl font-semibold mt-32 text-center my-4">Tim Kami</p>
             <div className="grid grid-cols-3 mx-52">
               <div className="bg-white w-64 h-128 shadow-xl rounded-lg text-center py-12 px-8">
                 <div className="flex justify-center">

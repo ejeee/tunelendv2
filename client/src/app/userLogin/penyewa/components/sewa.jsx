@@ -33,7 +33,7 @@ const Sewa = () => {
           </div>
           <Link
             to="/penyewa/detail-sewa"
-            className="block w-full px-8 py-2 text-white rounded-2xl bg-[#165668] text-center mt-4"
+            className="px-8 py-2 text-white rounded-2xl bg-[#165668]"
           >
             Selengkapnya
           </Link>
@@ -58,7 +58,7 @@ const Sewa = () => {
           </div>
           <Link
             to="/penyewa/detail-sewa"
-            className="block w-full px-8 py-2 text-white rounded-2xl bg-[#165668] text-center mt-4"
+            className="px-8 py-2 text-white rounded-2xl bg-[#165668]"
           >
             Selengkapnya
           </Link>
@@ -83,7 +83,7 @@ const Sewa = () => {
           </div>
           <Link
             to="/penyewa/detail-sewa"
-            className="block w-full px-8 py-2 text-white rounded-2xl bg-[#165668] text-center mt-4"
+            className="px-8 py-2 text-white rounded-2xl bg-[#165668]"
           >
             Selengkapnya
           </Link>
