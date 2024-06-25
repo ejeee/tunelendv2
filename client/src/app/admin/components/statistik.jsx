@@ -2,19 +2,6 @@ import React from "react";
 import Chart from "chart.js/auto";
 import { useRef, useEffect } from "react";
 
-// import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
-// import { Pagination } from "flowbite-react";
-// import { useState } from "react";
-// import gitar from "../../../../../assets/image/gitar.png";
-// import star from "../../../../../assets/image/star.svg";
-// import caca from "../../../assets/image/caca.png";
-// import { FaInstagram } from "react-icons/fa6";
-// import { FiLinkedin } from "react-icons/fi";
-// import { PiGithubLogo } from "react-icons/pi";
-// import tangan from "../../../assets/image/animasiTangan.png";
-// import { Checkbox, Table, Badge } from "flowbite-react";
-// import { Link } from "react-router-dom";
-
 const Statistik = () => {
   const maintenanceProductChartRef = useRef(null);
   useEffect(() => {
