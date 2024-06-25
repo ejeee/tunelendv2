@@ -5,14 +5,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { signin } from "../../../service/auth";
 
 const Signin = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const [isAlertError, setIsAlertError] = useState(false);
   const [messageError, setMessageError] = useState('');
   const navigate = useNavigate();
 
-  const handleSignin = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault(); 
 
     try {
@@ -88,7 +88,7 @@ const Signin = () => {
               </div>
               <div className="flex justify-center w-full">
                 <button
-                  onClick={handleSignin}
+                  onClick={handleLogin}
                   type="button"
                   class="items-center content-center text-white bg-[#165668] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
                 >

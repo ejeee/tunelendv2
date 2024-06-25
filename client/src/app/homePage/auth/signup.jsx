@@ -2,20 +2,47 @@ import React, { useState } from "react";
 import tunelendLogo from "../../../assets/image/tunelend.png";
 import man from "../../../assets/image/man.png";
 import { Link, useNavigate } from "react-router-dom";
-import { signup } from "../../../service/auth";
+import { register } from "../../../service/auth";
 
 const Signup = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setconfirmPassword] = useState('');
+ 
 
   const [isAlertSuccess, setIsAlertSuccess] = useState(false);
   const [isAlertError, setIsAlertError] = useState(false);
   // const [messageError, setMessageError] = useState('');
+
+  // const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
+  const handleSubmit = async (event) => {
+      event.preventDefault();
+      if (password !== confirmPassword) {
+          alert("Kata sandi tidak cocok!");
+          return;
+      }
+      
+      try {
+          const response = await register(email, password);
+          if (response.success) {
+              console.log("Berhasil daftar");
+              navigate("/signin");
+          } else {
+              console.error('Registrasi gagal:', response.message);
+              alert('Registrasi gagal: ' + response.message);
+          }
+      } catch (error) {
+          console.error('Error registrasi:', error);
+          alert('Registrasi gagal: terjadi kesalahan');
+      }
+  };
+
+  // const navigate = useNavigate();
+
   // const handleSignup = async () => {
-  //   const response = await signup(email, password, confirmPassword);
+  //   const response = await register(signupEmail, signupPassword, confirmPassword);
   //   if(response.success){
   //     setIsAlertSuccess(!isAlertSuccess);
   //   } else {
@@ -23,28 +50,6 @@ const Signup = () => {
   //     setMessageError(response.message);
   //   }
   // };
-
-  const handleSignup = async (event) => {
-    event.preventDefault();
-    if (password !== confirmPassword) {
-        alert("Passwords don't match!");
-        return;
-    }
-    
-    try {
-        const response = await signup(email, password);
-        if (response.success) {
-            console.log("Registered successfully");
-            navigate("/signin");
-        } else {
-            console.error('Registration failed:', response.message);
-            alert('Registration failed: ' + response.message);
-        }
-    } catch (error) {
-        console.error('Registration error:', error);
-        alert('Registration failed: there is an error');
-    }
-};
 
 
   return (
@@ -116,14 +121,14 @@ const Signup = () => {
                   className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                   placeholder="Masukkan kembali password"
                   value={confirmPassword}
-                  onChange={(e) => setconfirmPassword(e.target.value)}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                   required
                 />
               </div>
               <div className="flex justify-center w-full">
                 <button
                   type="button"
-                  onClick={handleSignup}
+                  onClick={handleSubmit}
                   className="items-center content-center text-white bg-[#165668] font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center"
                 >
                   Daftar
