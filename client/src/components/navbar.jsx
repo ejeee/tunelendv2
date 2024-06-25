@@ -76,6 +76,15 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <button
+                onClick={() => {
+                  handleMenu();
+                  navigate("/signin");
+                }}
+                className="border-2 rounded-2xl px-8 py-1 text-left"
+              >
+                Masuk
+              </button>
             </li>
           </ul>
         </div>
