@@ -71,7 +71,7 @@ const TentangKamiUser = () => {
                   <a href="https://www.instagram.com/adndam_03" target="_blank" rel="noopener noreferrer">
                     <FaInstagram />
                   </a>
-                  <a href="https://www.linkedin.com/in/adindamayang" target="_blank" rel="noopener noreferrer">
+                  <a href="http://www.linkedin.com/in/adinda-eka-mayang" target="_blank" rel="noopener noreferrer">
                     <FiLinkedin />
                   </a>
                   <a href="https://github.com/dinda008" target="_blank" rel="noopener noreferrer">
